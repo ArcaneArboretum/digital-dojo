@@ -41,7 +41,7 @@ The goal of this project is to provide more resources to martial arts students t
 
 ## Documentation
 
-This project is documented with formal, structured requirements documents, including a Vision and Scope document and Software Requirements Specification using [StrictDoc](https://github.com/strictdoc-project/strictdoc). These are primarily included for the sake of completeness in the presentation of this project to an academic review board in the completion of a graduate thesis in Software Engineering at CSU Fullerton.
+This project is documented with formal, structured requirements documents, including a Vision and Scope document and Software Requirements Specification using [StrictDoc](https://github.com/strictdoc-project/strictdoc). These are primarily included for the sake of completeness in the presentation of this project to an academic review board in the completion of a graduate thesis in Software Engineering at CSU Fullerton. You can read the provided documentation on the GitHub Pages site [here](https://arcanearboretum.github.io/digital-dojo/).
 
 ## Project Management
 
