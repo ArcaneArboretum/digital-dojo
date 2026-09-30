@@ -1,0 +1,14 @@
+[DOCUMENT]
+MID: 8796204fc0df42be981a287bee131bac
+TITLE: High-Level Requirements
+PREFIX: HLR-
+OPTIONS:
+  ENABLE_MID: True
+
+[REQUIREMENT]
+MID: 0c869d4f7e8d42509452c9598a16e2b0
+UID: HLR-1
+TITLE: Initial high-level requirement
+STATEMENT: >>>
+The system shall provide a hello world application.
+<<<
