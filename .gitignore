@@ -1,17 +1,138 @@
-# Godot 4+ specific ignores
+# =============================================================================
+# digital-dojo .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Proprietary system or local testing data (NEVER commit; see README)
+# Keep real technique data, audio, and animations outside the repo.
+# -----------------------------------------------------------------------------
+**/data-private/
+**/data-local/
+
+# -----------------------------------------------------------------------------
+# Secrets and environment config
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+**/secrets/
+
+# -----------------------------------------------------------------------------
+# Local databases (SQLite)
+# Keep small, synthetic sample databases in /data-sample/ if you want them tracked
+# -----------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+!**/data-sample/*.sqlite
+!**/data-sample/*.sqlite3
+!**/data-sample/*.db
+
+# -----------------------------------------------------------------------------
+# Godot 4
+# -----------------------------------------------------------------------------
 .godot/
 .nomedia
-
-# Godot-specific ignores
-.import/
-export.cfg
-export_credentials.cfg
-*.tmp
-
-# Imported translations (automatically generated from CSV files)
+**/android/
+**/godot/export/
+**/godot/builds/
 *.translation
+export_presets.cfg
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
+# -----------------------------------------------------------------------------
+# Node / React / Vite
+# -----------------------------------------------------------------------------
+**/node_modules/
+**/dist/
+**/dist-ssr/
+.vite/
+.cache/
+**/coverage/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+# Commit lockfiles (package-lock.json / pnpm-lock.yaml / yarn.lock)
+
+# -----------------------------------------------------------------------------
+# Rust / Tauri
+# -----------------------------------------------------------------------------
+**/target/
+**/src-tauri/target/
+**/src-tauri/gen/schemas/
+
+# re-include Tauri's generated Android project (since the generic **/android/ rule would hide it)
+!**/src-tauri/gen/android/
+
+# Commit Cargo.lock (this project ships binaries)
+
+# -----------------------------------------------------------------------------
+# Python (StrictDoc, tooling, server if Python)
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+build/
+
+# -----------------------------------------------------------------------------
+# StrictDoc generated output
+# -----------------------------------------------------------------------------
+/output/
+/docs-build/
+
+# -----------------------------------------------------------------------------
+# Blender / Mesh2Motion / source assets
+# -----------------------------------------------------------------------------
+*.blend1
+*.blend2
+*.blend@
+resources/**/renders/
+resources/**/tmp/
+resources/**/cache/
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+
+# -----------------------------------------------------------------------------
+# Logs and temp files
+# -----------------------------------------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.swp
+*~
+
+# -----------------------------------------------------------------------------
+# Editors / IDEs
+# -----------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.iml
+
+# -----------------------------------------------------------------------------
+# OS files
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
