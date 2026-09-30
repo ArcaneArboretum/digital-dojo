@@ -1,0 +1,68 @@
+# =============================================================================
+# digital-dojo .gitattributes
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Line endings
+# -----------------------------------------------------------------------------
+* text=auto eol=lf
+
+# Windows-only scripts need CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Shell scripts must stay LF
+*.sh text eol=lf
+Dockerfile text eol=lf
+
+# -----------------------------------------------------------------------------
+# Explicit text types
+# -----------------------------------------------------------------------------
+*.sdoc text
+*.gd text
+*.tscn text
+*.tres text
+*.godot text
+*.import text
+*.rs text
+*.toml text
+*.sql text
+*.md text
+*.json text
+*.svg text
+
+# -----------------------------------------------------------------------------
+# Binary files: never diff, merge, or convert line endings
+# -----------------------------------------------------------------------------
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.icns binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.flac binary
+*.glb binary
+*.fbx binary
+*.sqlite binary
+*.sqlite3 binary
+*.db binary
+*.pdf binary
+
+# -----------------------------------------------------------------------------
+# GitHub Linguist: keep language stats and diffs meaningful
+# -----------------------------------------------------------------------------
+package-lock.json linguist-generated
+pnpm-lock.yaml linguist-generated
+yarn.lock linguist-generated
+Cargo.lock linguist-generated
+*.import linguist-generated
+**/src-tauri/gen/** linguist-generated
+docs/** linguist-documentation

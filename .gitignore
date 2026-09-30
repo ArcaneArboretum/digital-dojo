@@ -6,8 +6,8 @@
 # Proprietary system or local testing data (NEVER commit; see README)
 # Keep real technique data, audio, and animations outside the repo.
 # -----------------------------------------------------------------------------
-**/data-private/
-**/data-local/
+**/data/private/
+**/data/local/
 
 # -----------------------------------------------------------------------------
 # Secrets and environment config
@@ -31,9 +31,9 @@
 *.db-shm
 *.db-wal
 *.db-journal
-!**/data-sample/*.sqlite
-!**/data-sample/*.sqlite3
-!**/data-sample/*.db
+!**/data/sample/*.sqlite
+!**/data/sample/*.sqlite3
+!**/data/sample/*.db
 
 # -----------------------------------------------------------------------------
 # Godot 4
@@ -98,12 +98,14 @@ build/
 # -----------------------------------------------------------------------------
 # Blender / Mesh2Motion / source assets
 # -----------------------------------------------------------------------------
+*.blend
 *.blend1
 *.blend2
 *.blend@
-resources/**/renders/
-resources/**/tmp/
-resources/**/cache/
+*.glb
+*.fbx
+*.wav
+*.flac
 
 # -----------------------------------------------------------------------------
 # Docker
